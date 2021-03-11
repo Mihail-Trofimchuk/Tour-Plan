@@ -588,7 +588,9 @@ img {
     -ms-flex-preferred-size: auto !important;
         flex-basis: auto !important;
   }
-  height: 350px;
+  .slider {
+    height: 350px;
+  }
   .hotel-right {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
