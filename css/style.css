@@ -742,9 +742,11 @@ img {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    width: 100%;
   }
   .hotel__slider {
     margin-bottom: 30px;
+    width: 100%;
   }
   .hotel-right {
     -webkit-box-orient: horizontal;
@@ -796,6 +798,10 @@ img {
     width: 16px;
     height: 1px;
     background-color: #333333;
+  }
+  .hotel__slider {
+    height: 350px;
+    width: 100%;
   }
   .hotel-name {
     -ms-flex-preferred-size: 100%;
@@ -876,13 +882,13 @@ img {
   }
 }
 
-@media (max-width: 576px) {
+@media ( max-width: 576px ) {
   .logo {
     width: 99px;
   }
   .stars {
-    -ms-flex-preferred-size: auto !important;
-        flex-basis: auto !important;
+    -ms-flex-preferred-size: auto;
+        flex-basis: auto;
   }
   .hotel-slider {
     height: 250px;
