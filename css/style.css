@@ -293,10 +293,12 @@ img {
 
 .hotel-slider__button--next {
   right: 18px;
+  outline: none;
 }
 
 .hotel-slider__button--prev {
   left: 18px;
+  outline: none;
 }
 
 .stars {
@@ -452,6 +454,7 @@ img {
   font-size: 14px;
   line-height: 19px;
   border-radius: 4px;
+  outline: none;
   background-color: #EC1F46;
   border: none;
   color: #ffffff;
@@ -466,15 +469,15 @@ img {
 }
 
 .newsletter {
-  position: fixed;
   position: relative;
   padding: 98px 0 87px 0;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
   background-image: url(../img/newsletter-bg.jpg);
   -webkit-transition: all 3s ease;
   transition: all 3s ease;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .newsletter::before {
@@ -546,6 +549,7 @@ img {
   max-width: 80px;
   right: 0;
   top: 0;
+  outline: none;
   height: 100%;
   border: none;
   background-color: #EC1F46;
@@ -626,11 +630,13 @@ img {
 .reviews-slider__button--prev {
   background-image: url(../img/Stroke1.svg);
   left: 0;
+  outline: none;
 }
 
 .reviews-slider__button--next {
   background-image: url(../img/Stroke-2.svg);
   right: 0;
+  outline: none;
 }
 
 .reviews-slider__profile {
@@ -691,6 +697,95 @@ img {
   max-width: 537px;
 }
 
+.activities {
+  padding: 60px 0 98px 0;
+}
+
+.activities__title {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 30px;
+  text-transform: uppercase;
+  margin-bottom: 57px;
+}
+
+.activities-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.card {
+  padding: 24px 26px;
+  width: 255px;
+  height: 255px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background: linear-gradient(179.83deg, rgba(196, 196, 196, 0) 35.34%, #0A223D 99.85%);
+  z-index: -1;
+}
+
+.card__image {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: -2;
+}
+
+.card__title {
+  margin-top: auto;
+  margin-bottom: 18px;
+  color: #ffffff;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.card__button {
+  background-color: #EC1F46;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 7px 22px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  color: #ffffff;
+  outline: none;
+}
+
 @media (max-width: 1200px) {
   .container {
     max-width: 960px;
@@ -707,6 +802,10 @@ img {
     height: 100%;
     -o-object-fit: cover;
        object-fit: cover;
+  }
+  .card {
+    width: 230px;
+    height: 230px;
   }
 }
 
@@ -763,6 +862,17 @@ img {
   }
   .reviews-slider__item {
     max-width: 580px;
+  }
+  .activities-wrapper {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .activities__card {
+    margin-bottom: 20px;
+  }
+  .card {
+    width: 340px;
+    height: 230px;
   }
 }
 
@@ -880,15 +990,23 @@ img {
     -webkit-transform: translate(50%, 0);
             transform: translate(50%, 0);
   }
+  .activites {
+    padding-top: 40px;
+    padding-bottom: 60px;
+  }
+  .card {
+    width: 48%;
+    height: 255px;
+  }
 }
 
-@media ( max-width: 576px ) {
+@media (max-width: 576px) {
   .logo {
     width: 99px;
   }
   .stars {
-    -ms-flex-preferred-size: auto;
-        flex-basis: auto;
+    -ms-flex-preferred-size: auto !important;
+        flex-basis: auto !important;
   }
   .hotel-slider {
     height: 250px;
@@ -911,6 +1029,9 @@ img {
     margin-bottom: 37px;
   }
   .subscribe {
+    width: 100%;
+  }
+  .card {
     width: 100%;
   }
 }

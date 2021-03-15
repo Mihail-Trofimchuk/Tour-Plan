@@ -1,4 +1,4 @@
-const hotelSlider = new Swiper('.hotel-slider', {
+const hotelSlider = new Swiper('.swiper-container', {
   // Optional parameters
   loop: true,
   // Navigation arrows
@@ -17,16 +17,4 @@ const reviewsSlider = new Swiper('.reviews-slider', {
     prevEl: '.reviews-slider__button--prev',
   },
   keyboard: true,
-});
-$(function () {
-  $('.newsletter-parallax').parallax();
-});
-$(document).ready(function () {
-  $(window).bind('scroll', function (e) {
-    var scrolledY = $(window).scrollTop();
-    $('.bgWrapper').css(
-      'background-position',
-      'center -' + scrolledY * 0.2 + 'px'
-    );
-  });
 });

@@ -1,12 +1,12 @@
 .newsletter
-  position: fixed
   position: relative
   padding: 98px 0 87px 0
-  background-repeat: no-repeat
-  background-position: center
-  background-size: cover
   background-image: url(../img/newsletter-bg.jpg)
   transition: all 3s ease 
+  background-attachment: fixed
+  background-position: center
+  background-repeat: no-repeat
+  background-size: cover
   &::before
     content: ''
     position: absolute
@@ -59,6 +59,7 @@
     max-width: 80px
     right: 0
     top: 0
+    outline: none
     height: 100%
     border: none
     background-color: $primary
