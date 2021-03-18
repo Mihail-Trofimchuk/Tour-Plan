@@ -14,8 +14,36 @@
         object-fit: cover 
   .card
     width: 230px
-    height: 230px          
+    height: 230px
+  .packages
+    &-grid 
+      display: flex
+      flex-wrap: wrap
+      justify-content: center
+      margin: 
+      width: 100%
+    &__title
+      text-align: center
+   
 @media (max-width: 992px )
+  .packages
+    &__button
+      padding: 10px 12px
+    &-horizonelement
+      &-image
+        max-width: 280px
+      &__text
+        max-width: 326px
+        padding: 40px 21px 27px 24px
+    &-element
+      &__image
+        border-radius: 8px 0 0 8px
+      &-item
+        display: flex
+        flex-direction: row
+    &__text
+      border-radius: 0px 8px 8px 0    
+    
   .container, 
   .newsletter-wrapper
     max-width: 700px
@@ -62,7 +90,33 @@
   .card
     width: 340px
     height: 250px 
-@media (max-width: 768px )  
+@media (max-width: 768px ) 
+  .packages
+    &-grid 
+      display: flex
+      flex-wrap: wrap
+      justify-content: center
+    &-element
+      &__image
+        border-radius: 8px 0 0 8px
+      &-item
+        display: flex
+        flex-direction: row
+    &__text
+      border-radius: 0px 8px 8px 0 
+  .swiper
+    &-container
+      height: 400px
+  .activities
+    padding-bottom: 0
+  .reviews
+    padding-bottom: 0
+  .packages
+    padding-top: 0   
+    &__title
+      margin-bottom: 0
+    &-horizonelement
+      display: none    
   .container
     max-width: 576px 
     width: 92%  
@@ -143,8 +197,35 @@
     padding-bottom: 60px        
   .card
     width: 48%
-    height: 255px                                    
-@media (max-width: 576px )    
+    height: 255px
+  /*.packages
+    &-horizonelement
+      &:first-child
+        display: none */                                            
+@media (max-width: 576px )
+  .hotel
+    padding-bottom: 50px 
+  .packages
+    &__title
+      margin-top: 0
+      margin-bottom: 30px 
+    &-grid  
+      display: flex
+      flex-wrap: wrap
+      justify-content: center
+    &-element
+      &__image
+        border-radius: 8px 8px 0 0
+      &-item
+        display: flex
+        flex-direction: column
+      &-media
+        margin-left: -30px
+
+
+
+    &__text 
+      border-radius: 0 0 8px 8px
   .logo
     width: 99px    
   .stars
@@ -167,5 +248,11 @@
   .subscribe
     width: 100% 
   .card
-    width: 100%          
+    width: 100% 
+@media (max-width: 380px ) 
+  .packages
+    &-element
+      &-media
+        margin-left: 0px
+
       
