@@ -831,7 +831,7 @@ img {
   border-radius: 8px;
 }
 
-.packages-horizonelement__text {
+.packages-horizonelement-text {
   max-width: 364px;
   height: 500px;
   background-color: #0A223D;
@@ -1073,7 +1073,7 @@ img {
   font-size: 14px;
 }
 
-.packages-horizonelement-guests__text:nth-child(-n+2) {
+.packages-horizonelement-guests-text:nth-child(-n+2) {
   margin-bottom: 11px;
 }
 
@@ -1132,7 +1132,7 @@ img {
   .packages-horizonelement-image {
     max-width: 280px;
   }
-  .packages-horizonelement__text {
+  .packages-horizonelement-text {
     max-width: 326px;
     padding: 40px 21px 27px 24px;
   }
@@ -1218,6 +1218,10 @@ img {
 }
 
 @media (max-width: 768px) {
+  .packages__title {
+    margin-top: 0;
+    margin-bottom: 40px;
+  }
   .packages-grid {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1255,11 +1259,16 @@ img {
   .packages {
     padding-top: 0;
   }
-  .packages__title {
-    margin-bottom: 0;
+  .packages-horizonelement-text {
+    max-width: 300px;
+    min-width: 250px;
+    padding: 20px 21px 27px 24px;
   }
-  .packages-horizonelement {
-    display: none;
+  .packages-horizonelement__image {
+    min-width: 250px;
+  }
+  .packages-horizonelement__description {
+    margin-bottom: 20px;
   }
   .container {
     max-width: 576px;
@@ -1418,8 +1427,52 @@ img {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .packages-element-media {
-    margin-left: -30px;
+  .packages-button {
+    margin-bottom: 30px;
+  }
+  .packages-horizonelement {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .packages-horizonelement__introduction {
+    margin-bottom: 10px;
+  }
+  .packages-horizonelement-text {
+    height: 250px;
+    max-width: 350px;
+    padding: 20px 21px 23px 24px;
+    border-radius: 0;
+  }
+  .packages-horizonelement__offer {
+    font-size: 8px;
+    line-height: 10px;
+    padding: 4px 9px;
+  }
+  .packages-horizonelement__image {
+    height: 100%;
+    width: 100%;
+    border-radius: 0;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: 0 0;
+       object-position: 0 0;
+  }
+  .packages-horizonelement__description {
+    display: none;
+    margin-bottom: 20px;
+  }
+  .packages-horizonelement-guests {
+    margin-bottom: 20px;
+  }
+  .packages-horizonelement-image {
+    height: 250px;
+    max-width: 350px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: 0 0;
+       object-position: 0 0;
   }
   .packages__text {
     border-radius: 0 0 8px 8px;

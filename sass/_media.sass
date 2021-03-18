@@ -32,7 +32,7 @@
     &-horizonelement
       &-image
         max-width: 280px
-      &__text
+      &-text
         max-width: 326px
         padding: 40px 21px 27px 24px
     &-element
@@ -92,6 +92,9 @@
     height: 250px 
 @media (max-width: 768px ) 
   .packages
+    &__title
+      margin-top: 0
+      margin-bottom: 40px
     &-grid 
       display: flex
       flex-wrap: wrap
@@ -113,10 +116,17 @@
     padding-bottom: 0
   .packages
     padding-top: 0   
-    &__title
-      margin-bottom: 0
     &-horizonelement
-      display: none    
+      &-text 
+        max-width: 300px
+        min-width: 250px
+        padding: 20px 21px 27px 24px
+      &__image
+        min-width: 250px
+      &__description
+        margin-bottom: 20px
+  
+    
   .container
     max-width: 576px 
     width: 92%  
@@ -219,9 +229,38 @@
       &-item
         display: flex
         flex-direction: column
-      &-media
-        margin-left: -30px
-
+    &-button
+        margin-bottom: 30px
+    &-horizonelement
+      flex-direction: column
+      &__introduction
+        margin-bottom: 10px
+      &-text 
+        height: 250px
+        max-width: 350px
+        padding: 20px 21px 23px 24px
+        border-radius: 0 
+      &__offer
+        font-size: 8px
+        line-height: 10px
+        padding: 4px 9px  
+      &__image
+        height: 100%
+        width: 100%
+        border-radius: 0
+        object-fit: cover
+        object-position: 0 0
+      &__description
+        display: none
+        margin-bottom: 20px
+      &-guests
+        margin-bottom: 20px  
+      &-image
+        height: 250px
+        max-width: 350px
+        object-fit: cover
+        object-position: 0 0 
+  
 
 
     &__text 
