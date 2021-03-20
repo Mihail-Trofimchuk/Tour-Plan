@@ -24,8 +24,49 @@
       width: 100%
     &__title
       text-align: center
-   
+  .footer
+    &__input
+      flex-basis: 100%              
 @media (max-width: 992px )
+  .footer
+    &-info
+      grid-row: 5
+      grid-column: 1/4
+    &-text
+      justify-content: start 
+    &-card
+      grid-column: 6/7 
+
+    &__input
+      flex-basis: 49% 
+    &-wrapper
+      grid-template-columns: repeat(6,1fr)
+      grid-row-gap: 40px
+    &__input
+      flex-basis: 49% 
+    &__logo
+      grid-row: 1/2
+      grid-column: span 2
+    &__social
+      &-network
+        grid-row: 1/2
+        grid-column: span 4
+        align-self: center
+    &__categories
+      grid-row: 2/3 
+      grid-column: span 2
+    &__legal
+      grid-column: span 2  
+    &__addition
+      grid-column: span 2 
+      margin: 0 
+    &__contact
+      &-details
+        grid-row: 3
+        grid-column: span 5
+      &-form 
+        grid-column: span 5
+        grid-row: 4
   .packages
     &__button
       padding: 10px 12px
@@ -130,9 +171,20 @@
   .container
     max-width: 576px 
     width: 92%  
+  body
+    padding-top: 78px  
   .navbar
+    /*&--mobile
+      &_fixed
+        position: fixed
+        left: 0
+        top: 0
+        right: 0
+        z-index: 99*/
     &__search,&-menu,&__user
-      display: none  
+      display: none 
+    &-button
+      display: none 
   .menu
     &-button
       width: 16px
@@ -211,7 +263,12 @@
   /*.packages
     &-horizonelement
       &:first-child
-        display: none */                                            
+        display: none */ 
+  .footer
+    &__input
+      flex-basis: 100% 
+    &-info
+      grid-column: 1/5                                                  
 @media (max-width: 576px )
   .hotel
     padding-bottom: 50px 
@@ -288,6 +345,47 @@
     width: 100% 
   .card
     width: 100% 
+  .footer
+    &-wrapper
+      grid-template-columns: 1fr
+      row-gap: 20px
+    &__logo 
+      grid-row: 1
+      grid-column: 1 
+    &__social
+      &-network
+        grid-row: 2
+        grid-column: 1
+    &__addition
+      grid-row: 3
+      grid-column: 1
+    &__categories
+      grid-row: 4
+      grid-column: 1
+    &__legal
+      margin: 0
+      grid-row: 5
+      grid-column: 1
+    &__contact
+      &-details
+        grid-row: 6
+        grid-column: 1
+      &-form
+        grid-row: 7
+        grid-column: 1 
+    &-info
+      height: 20px
+      grid-row: 8
+      grid-column: 1
+    &-text
+      justify-content: start 
+    &-card
+      margin-top: -30px
+      grid-row: 9
+      grid-column: 1
+      justify-content: start 
+
+                      
 @media (max-width: 380px ) 
   .packages
     &-element
