@@ -18,3 +18,11 @@ const reviewsSlider = new Swiper('.reviews-slider', {
   },
   keyboard: true,
 });
+
+var menuButton = document.querySelector('.menu-button');
+menuButton.addEventListener('click', function () {
+  console.log('Коик по кнопке меню');
+  document
+    .querySelector('.navbar-button')
+    .classList.toggle('navbar-button--visible');
+});
