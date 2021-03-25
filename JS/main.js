@@ -9,6 +9,7 @@ $(document).ready(function () {
     },
     keyboard: true,
   });
+  AOS.init();
   const reviewsSlider = new Swiper('.reviews-slider', {
     // Optional parameters
     loop: true,

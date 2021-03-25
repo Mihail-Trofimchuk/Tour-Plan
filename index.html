@@ -9,6 +9,7 @@
       href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&family=Nunito:wght@400;700;800&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="css/aos.css" />
     <link rel="stylesheet" href="css/swiper.css" />
     <script
       src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=<5ed309e2-9fba-4c63-9425-565cf3513ce9>"
@@ -24,7 +25,7 @@
     <header class="navbar navbar--mobile_fixed">
       <div class="container">
         <div class="navbar-top">
-          <a href="#" class="logo">
+          <a href="#" class="logo" data-aos="fade-right">
             <img
               src="img/horizontal-logo.svg "
               alt="Logo: Best Tour Plan"
@@ -34,6 +35,7 @@
           <form
             action="#"
             class="search navbar__search navbar__search--mobile--hidden form"
+            data-aos="fade-right"
           >
             <div class="search__input-group">
               <input
@@ -217,7 +219,7 @@
             </button>
           </div>
           <div class="hotel-right">
-            <div class="booking">
+            <div class="booking" data-aos="fade-left" data-aos-delay="300">
               <div class="booking__info">
                 <!--  -->
                 <div class="booking__price">
@@ -259,7 +261,7 @@
               </button>
             </div>
             <!-- booking -->
-            <div id="map"></div>
+            <div id="map" data-aos="fade-left" data-aos-delay="300"></div>
           </div>
           <!-- hotel-right width="100%"
                 height="213"-->
@@ -351,7 +353,11 @@
           </div>
           <!--  -->
           <div class="packages-element packages-element-media">
-            <div class="packages-element-item">
+            <div
+              class="packages-element-item"
+              data-aos="zoom-in"
+              data-aos-delay="500"
+            >
               <span class="packages-element__offer"> Flash Offer </span>
               <div class="packages-element-image">
                 <img
@@ -406,7 +412,11 @@
           </div>
           <!--  -->
           <div class="packages-element">
-            <div class="packages-element-item">
+            <div
+              class="packages-element-item"
+              data-aos="zoom-in"
+              data-aos-delay="500"
+            >
               <span class="packages-element__offer"> Flash Offer </span>
               <div class="packages-element-image">
                 <img
@@ -461,7 +471,11 @@
           </div>
           <!--  -->
           <div class="packages-element">
-            <div class="packages-element-item">
+            <div
+              class="packages-element-item"
+              data-aos="zoom-in"
+              data-aos-delay="500"
+            >
               <span class="packages-element__offer"> Flash Offer </span>
               <div class="packages-element-image">
                 <img
@@ -516,7 +530,11 @@
           </div>
           <!--  -->
           <div class="packages-element">
-            <div class="packages-element-item">
+            <div
+              class="packages-element-item"
+              data-aos="zoom-in"
+              data-aos-delay="500"
+            >
               <span class="packages-element__offer"> Flash Offer </span>
               <div class="packages-element-image">
                 <img
@@ -755,7 +773,11 @@
       <div class="container">
         <h2 class="activities__title">Other Activities</h2>
         <div class="activities-wrapper">
-          <div class="card activities__card">
+          <div
+            class="card activities__card"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
             <img
               src="img/activitie-one.jpg"
               alt="The curious corner 
@@ -766,7 +788,11 @@ of chamarel"
             <button class="card__button">Book Now</button>
           </div>
           <!-- card -->
-          <div class="card activities__card">
+          <div
+            class="card activities__card"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
             <img
               src="img/activitie-two.jpg"
               alt="Gymkhana club golf
@@ -776,7 +802,11 @@ course"
             <h3 class="card__title">Gymkhana club golf course</h3>
             <button class="card__button">Book Now</button>
           </div>
-          <div class="card activities__card">
+          <div
+            class="card activities__card"
+            data-aos="fade-up"
+            data-aos-delay="500"
+          >
             <img
               src="img/activitie-three.jpg"
               alt="Tamarind falls hiking
@@ -788,7 +818,11 @@ trip - full day
             <h3 class="card__title">Tamarind falls hiking trip - full day</h3>
             <button class="card__button">Book Now</button>
           </div>
-          <div class="card activities__card">
+          <div
+            class="card activities__card"
+            data-aos="fade-up"
+            data-aos-delay="700"
+          >
             <img
               src="img/activitie-four.jpg"
               alt="The blue marine discovery
@@ -1059,6 +1093,7 @@ quest"
         </form>
       </div>
     </div>
+    <script src="JS/aos.js"></script>
     <script src="JS/jquery-3.6.0.min.js"></script>
     <script src="JS/jquery.mask.min.js"></script>
     <script src="JS/swiper.js"></script>
