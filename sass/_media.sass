@@ -28,6 +28,9 @@
     &__input
       flex-basis: 100%              
 @media (max-width: 992px )
+  .modal
+    &__button
+      margin-bottom: 20px
   .footer
     &-info
       grid-row: 5
@@ -216,6 +219,7 @@
       width: 16px
       height: 11px
       border: none
+      outline: none
       display: flex
       align-items: center
       justify-content: space-between
@@ -300,8 +304,14 @@
     &__input
       flex-basis: 100% 
     &-info
-      grid-column: 1/5                                                  
+      grid-column: 1/5 
+  .modal
+    &__dialog
+      padding: 20px 45px                                                     
 @media (max-width: 576px )
+  .modal
+    &__dialog
+      padding: 20px 45px
   .hotel
     padding-bottom: 50px 
   .packages

@@ -33,16 +33,20 @@
           </a>
           <form
             action="#"
-            class="search navbar__search navbar__search--mobile--hidden"
+            class="search navbar__search navbar__search--mobile--hidden form"
           >
-            <input
-              type="text"
-              class="search__input"
-              placeholder="Search Location"
-            />
-            <button class="search__button">
-              <img src="img/search.svg" alt="Icon: search" />
-            </button>
+            <div class="search__input-group">
+              <input
+                type="text"
+                class="search__input"
+                placeholder="Search Location"
+                required
+                name="search"
+              />
+              <button class="search__button">
+                <img src="img/search.svg" alt="Icon: search" />
+              </button>
+            </div>
           </form>
           <a href="#" class="user navbar__user navbar__user--mobile--hidden">
             <img
@@ -78,16 +82,19 @@
             <li class="navbar-menu__item navbar-menu__item--mobile--visible">
               <form
                 action="#"
-                class="search navbar__search navbar__search--mobile--visible"
+                class="search navbar__search navbar__search--mobile--visible form"
               >
-                <input
-                  type="text"
-                  class="search__input"
-                  placeholder="Search Location"
-                />
-                <button class="search__button">
-                  <img src="img/search.svg" alt="Icon: search" />
-                </button>
+                <div class="search__input-group">
+                  <input
+                    type="text"
+                    class="search__input"
+                    placeholder="Search Location"
+                    required
+                  />
+                  <button class="search__button">
+                    <img src="img/search.svg" alt="Icon: search" />
+                  </button>
+                </div>
               </form>
             </li>
             <li class="navbar-menu__item">
@@ -573,18 +580,22 @@
             subscribe to our
             <span class="newsletter-title__strong">Newsletter</span>
           </h2>
+
           <form
             action="send.php"
             method="POST"
-            class="subscribe newsletter__subscribe"
+            class="subscribe newsletter__subscribe form"
           >
-            <input
-              type="text"
-              class="subscribe__input"
-              placeholder="Your email address"
-              name="email"
-            />
-            <button class="subscribe__button" type="submit">Send</button>
+            <div class="subscribe__input-group">
+              <input
+                type="email"
+                class="subscribe__input"
+                placeholder="Your email address"
+                name="email"
+                required
+              />
+              <button class="subscribe__button" type="submit">Send</button>
+            </div>
           </form>
         </div>
       </div>
@@ -944,19 +955,27 @@ quest"
           </div>
           <div class="footer__contact-form">
             <h3 class="footer__title footer__title--mb-3">Send us a message</h3>
-            <form action="send.php" method="POST" class="footer__form">
-              <input
-                type="text"
-                class="input footer__input"
-                placeholder="Your Full Name*"
-                name="name"
-              />
-              <input
-                type="text"
-                class="input footer__input"
-                placeholder="Phone Number*"
-                name="phone"
-              />
+            <form action="send.php" method="POST" class="footer__form form">
+              <div class="footer__input-group">
+                <input
+                  type="text"
+                  class="input footer__input"
+                  placeholder="Your Full Name*"
+                  name="name"
+                  required
+                />
+              </div>
+              <div class="footer__input-group">
+                <input
+                  type="tel"
+                  class="input footer__input phone"
+                  placeholder="Phone Number*"
+                  name="phone"
+                  required
+                  phone-mask="+7 (000) 000-00-00"
+                />
+              </div>
+
               <textarea
                 class="message footer__message"
                 placeholder="Message"
@@ -1005,19 +1024,30 @@ quest"
         <a href="#" class="modal__close">
           <img src="img\close.svg" alt="Close" />
         </a>
-        <h3 class="modal__title modal __title--mb-3">Send us a message</h3>
-        <form action="send.php" method="POST" class="modal__form">
+        <h3 class="modal__title modal __title--mb-3">Booking</h3>
+        <form action="send.php" method="POST" class="modal__form form">
           <input
             type="text"
             class="input modal__input"
             placeholder="Your Full Name*"
             name="name"
+            required
+            minlength="2"
           />
           <input
-            type="text"
-            class="input modal__input"
+            type="tel"
+            class="input modal__input phone"
             placeholder="Phone Number*"
             name="phone"
+            required
+            phone-mask="+7 (000) 000-00-00"
+          />
+          <input
+            type="email"
+            class="input modal__input"
+            placeholder="Your Email*"
+            name="email"
+            required
           />
           <textarea
             class="message modal__message"
@@ -1030,7 +1060,9 @@ quest"
       </div>
     </div>
     <script src="JS/jquery-3.6.0.min.js"></script>
+    <script src="JS/jquery.mask.min.js"></script>
     <script src="JS/swiper.js"></script>
+    <script src="JS/jquery.validate.min.js"></script>
     <script src="JS/main.js"></script>
   </body>
 </html>
