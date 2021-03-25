@@ -41,12 +41,14 @@
       grid-column: 6/7 
 
     &__input
-      flex-basis: 49% 
+      &-group
+        flex-basis: 49% 
     &-wrapper
       grid-template-columns: repeat(6,1fr)
       grid-row-gap: 40px
     &__input
-      flex-basis: 49% 
+      &-group
+        flex-basis: 49% 
     &__logo
       grid-row: 1/2
       grid-column: span 2
@@ -302,7 +304,8 @@
         display: none */ 
   .footer
     &__input
-      flex-basis: 100% 
+      &-group
+        flex-basis: 100% 
     &-info
       grid-column: 1/5 
   .modal
@@ -429,6 +432,9 @@
 
                       
 @media (max-width: 380px ) 
+  .search
+    &__inpup
+      width: 100px
   .navbar
     &__search
       max-width: 250px

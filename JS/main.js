@@ -22,7 +22,7 @@ $(document).ready(function () {
 
   var menuButton = document.querySelector('.menu-button');
   menuButton.addEventListener('click', function () {
-    console.log('Коик по кнопке меню');
+    console.log('Клик по кнопке меню');
     document
       .querySelector('.navbar-button')
       .classList.toggle('navbar-button--visible');
@@ -52,9 +52,30 @@ document.addEventListener('keydown', function (e) {
 document.addEventListener('keydown', function (e) {
   if (e.keyCode === 27) document.getElementById('modal1_id').hidden = 1;
 });
-/*$(document).on('keydown', function (e) {
-  if (e.keyCode == 27) {
-    modalOverlay.removeClass('modal__overlay--visible');
-    modalDialog.removeClass('modal__dialog--visible');
-  }
-});*/
+//Маска
+$(document).ready(function () {
+  $('.phone').mask('+7 (000) 000-00-00');
+});
+
+// Обработка форм
+$('.form').each(function () {
+  $(this).validate({
+    errorClass: 'invalid',
+    messages: {
+      name: {
+        required: 'Please specify your name',
+        minlength: 'At least two letters',
+      },
+      email: {
+        required: 'We need your email address to contact you',
+        email: 'Your email address must be in the format of name@domain.com',
+      },
+      search: {
+        required: 'Please write something',
+      },
+      phone: {
+        required: 'Phone is required',
+      },
+    },
+  });
+});
