@@ -1,8 +1,8 @@
-*
-  box-sizing: border-box 
+* 
+  box-sizing: border-box !important 
 body
   margin: 0
-  font-family: 'Muli',sans-serif
+  font-family: 'Mulish',sans-serif
   color: $text-color
 .container
   max-width: 1110px
@@ -24,8 +24,8 @@ img
   border: none 
 
 .button
-  min-width: 160px
-  min-height: 50px
+  width: 160px
+  height: 50px
   padding: 18px 
   outline: none
   cursor: pointer
@@ -45,5 +45,14 @@ img
   font-weight: bold
   font-size: 12px
   line-height: 15px
+textarea
+  resize: none 
+  overflow: hidden
+button
+  &:hover 
+    background: #8d25256b
+    color: #ffffff
+    box-shadow: inset 0 0 0 3px  $primary
+  
   
 

@@ -4,13 +4,12 @@
   padding-top: 108px
   padding-bottom: 46px
   &-card
-    display: flex
-    grid-row: 5/6
-    grid-column: 4/5
-    justify-content: flex-end
+    &__image
+      margin-left: 277px 
   &-info
-    grid-row: 5/6
-    grid-column: 2/4
+    margin-top: 95px
+    display: flex
+    justify-content: flex-end
   &-text
     font-family: Mulish
     font-style: normal
@@ -30,9 +29,11 @@
     grid-auto-rows: minmax(40px, min-content)
     align-items: start
   &__legal
-    margin-left: 50px  
+    margin-left: 65px  
   &__logo
-    width: 166px
+    margin-top: 30px
+    height: 182px
+    width: 156px
     align-self: stretch
     grid-row: 1/3
   &__categories
@@ -55,7 +56,6 @@
       grid-column: span 2
   &__form
     display: flex
-    align-items: center
     justify-content: space-between
     flex-wrap: wrap
   &__ul
@@ -85,6 +85,8 @@
     &--mb-2
       margin-bottom: 22px
   &__text
+    font-size: 14px
+    line-height: 160%
     color: $footer-text-color
     margin-bottom: 22px
   &__icon
@@ -102,27 +104,44 @@
     &--inline
       margin: 0 43px 0 0 
     &--mb-3
-      margin-bottom: 30px  
+      margin-bottom: 30px 
+      &--mb-2
+        margin-bottom: 24px
+        margin-top: 10px
+
+     
   &__link
     text-decoration: none
     color: inherit  
   &__input
     width: 100%
     &-group
-      margin-bottom: 15px
       flex-basis: 48%
+      margin-bottom: 15px
   &__message
-  
-    flex-basis: 100%
-    margin-bottom: 23px
+    height: 123px
     font-family: Mulish
     font-style: normal
     font-weight: normal
     font-size: 12px
-    line-height: 15px
-
-    
+    line-height: 15px 
+    &-group
+      display: flex
+      height: 146px
+      flex-direction: column
+      flex-basis: 100%
+      font-family: Mulish
+      font-style: normal
+      font-weight: normal
+      font-size: 12px
+      line-height: 15px
+  &__button
+    word-break: break-all
+    margin-top: 8px  
+    transition: all 500ms ease
   &__info
+    display: flex
+    align-items: center
     font-family: Mulish
     font-style: normal
     font-weight: bold

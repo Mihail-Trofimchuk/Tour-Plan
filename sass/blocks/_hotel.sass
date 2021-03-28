@@ -1,8 +1,12 @@
  
+.swiper
+  &-container
+    margin-left: 0!important
 .hotel
   background-color: $secondary
-  padding-top: 23px
+  padding-top: 17px
   padding-bottom: 70px
+  
   &-info
     display: flex
     align-items: center
@@ -13,10 +17,12 @@
       margin-top: 4px
       border-radius: 3px  
     &__name
-      margin-top: 4px
+      margin-top: 2px
       margin-bottom: 0
     &__description
-      margin: 5px 0
+      &-page
+        margin-bottom: 30px
+      margin: 0
   &-name
     font-size: 24px
     line-height: 30px
@@ -39,7 +45,7 @@
     height: 450px
     &__item
       width: 100%
-      height: 100%
+      height: 100%s
       position: relative
       border-radius: 8px
       overflow: hidden
@@ -55,6 +61,7 @@
         background: linear-gradient(180deg, rgba(0, 122, 223, 0.48) 0%, rgba(255, 255, 255, 0.128) 100%)
         z-index: 10 
     &__button
+      transition: all 500ms ease
       cursor: pointer
       top: 50%
       transform: translateY(-50%)
@@ -93,6 +100,7 @@
     font-size: 8px
     line-height: 10px
   &__counter
+    font-weight: bold
     font-size: 14px
     line-height: 18px
  
@@ -101,7 +109,7 @@
   color: $light
   border-radius: 8px
   width: 350px
-  min-height: 210px
+  max-height: 210px
   padding: 28px
   &__info
     display: flex
@@ -158,6 +166,8 @@
     font-size: 18px
     line-height: 25px
   &__button
+    transition: all 500ms ease
+    word-break: break-all
     font-family: Nunito
     width: 100%
     min-height: 45px
@@ -171,7 +181,9 @@
     color: $light
     cursor: pointer
 #map
+  cursor: pointer
   width: 347px
   height: 213px 
   border-radius: 10px
   overflow: hidden   
+  

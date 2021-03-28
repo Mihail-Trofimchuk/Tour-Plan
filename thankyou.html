@@ -24,7 +24,7 @@
     <header class="navbar navbar--mobile_fixed">
       <div class="container">
         <div class="navbar-top">
-          <a href="#" class="logo">
+          <a href="index.html" class="logo">
             <img
               src="img/horizontal-logo.svg "
               alt="Logo: Best Tour Plan"
@@ -135,9 +135,14 @@
             <div class="hotel-wrapper">
               <h1 class="hotel-name hotel-info__name">Сообщение отправлено!</h1>
             </div>
-            <p class="hotel-description hotel-info__description">
+            <p
+              class="hotel-description hotel-info__description hotel-info__description-page"
+            >
               Наш менеджер позвонит вам через 5 минут!
             </p>
+            <button data-toggle="modal" class="button booking__button">
+              Back to main page
+            </button>
           </div>
         </div>
       </div>
@@ -148,7 +153,7 @@
       <div class="container">
         <div class="footer-wrapper">
           <img
-            src="img\vertical-logo.svg"
+            src="img/vertical-logo.svg"
             alt="Best tour plan"
             class="logo footer__logo"
           />
@@ -210,13 +215,13 @@
             <h3 class="footer__title footer__title--inline">Social Network</h3>
             <div class="footer__social-links">
               <a href="#" class="footer__link"
-                ><img src="img\fb.svg" alt="Icon: Facebook"
+                ><img src="img/fb.svg" alt="Icon: Facebook"
               /></a>
               <a href="#" class="footer__link"
-                ><img src="img\inst.svg" alt="Icon: Instagram"
+                ><img src="img/inst.svg" alt="Icon: Instagram"
               /></a>
               <a href="#" class="footer__link"
-                ><img src="img\yt.svg" alt="Icon: YouTube"
+                ><img src="img/yt.svg" alt="Icon: YouTube"
               /></a>
             </div>
           </div>
@@ -238,7 +243,9 @@
             </ul>
           </div>
           <div class="footer__contact-details">
-            <h3 class="footer__title footer__title--mb-3">Contact Details</h3>
+            <h3 class="footer__title footer__title--mb-3--mb-2">
+              Contact Details
+            </h3>
             <p class="footer__text">
               Feel free to contact us by phone, email or by our contact form
             </p>
@@ -247,34 +254,38 @@
                 <div class="footer__icon-wrapper">
                   <img
                     class="footer__icon"
-                    src="img\point.svg"
+                    src="img/point.svg"
                     alt="icon: map"
                   />
                 </div>
-                <a href="" class="footer__item-link">
+                <span class="footer__item-link">
                   9748 Blossom Hill Rd undefined Lansing, Idaho 68545 United
-                  States</a
+                  States</span
                 >
               </li>
               <li class="footer__item footer__item--mb-2">
                 <div class="footer__icon-wrapper">
                   <img
                     class="footer__icon"
-                    src="img\telephone-radar.svg"
+                    src="img/telephone-radar.svg"
                     alt="icon: telephone"
                   />
                 </div>
                 <div class="footer__item-wrapper">
-                  <a href="#" class="footer__item-link">
-                    Tel (business hours) : 269 1500
+                  Tel (business hours) :<a
+                    href="tel:26-91-500 "
+                    class="footer__item-link"
+                  >
+                    269 1500
                   </a>
                   <br />
-                  <a href="#" class="footer__item-link">
-                    Tel (hotline) Monday - Saturday: 52-56-61-38 (08:00 am –
-                    20:00 pm)</a
+                  Tel (hotline) Monday - Saturday:
+                  <a href="tel:52-56-61-38" class="footer__item-link">
+                    52-56-61-38 (08:00 am – 20:00 pm)</a
                   ><br />
-                  <a href="#" class="footer__item-link">
-                    Tel (hotline) Sunday: 52-56-61-38 (08:00 am – 14:00 pm)</a
+                  Tel (hotline) Sunday:
+                  <a href="tel:52-56-61-38" class="footer__item-link">
+                    52-56-61-38 (08:00 am – 14:00 pm)</a
                   >
                 </div>
               </li>
@@ -282,11 +293,11 @@
                 <div class="footer__icon-wrapper">
                   <img
                     class="footer__icon"
-                    src="img\massege.svg"
+                    src="img/massege.svg"
                     alt="icon:massege"
                   />
                 </div>
-                <a href="#" class="footer__item-link"
+                <a href="cherly.lawson@example.com" class="footer__item-link"
                   >cherly.lawson@example.com</a
                 >
               </li>
@@ -294,46 +305,114 @@
           </div>
           <div class="footer__contact-form">
             <h3 class="footer__title footer__title--mb-3">Send us a message</h3>
-            <form action="send.php" method="POST" class="footer__form">
-              <input
-                type="text"
-                class="input footer__input"
-                placeholder="Your Full Name*"
-                name="name"
-              />
-              <input
-                type="text"
-                class="input footer__input"
-                placeholder="Phone Number*"
-                name="phone"
-              />
-              <textarea
-                class="message footer__message"
-                placeholder="Message"
-                name="message"
-              ></textarea>
+            <form action="send.php" method="POST" class="footer__form form">
+              <div class="footer__input-group">
+                <input
+                  type="text"
+                  class="input footer__input"
+                  placeholder="Your Full Name*"
+                  name="name"
+                  required
+                />
+              </div>
+              <div class="footer__input-group">
+                <input
+                  type="tel"
+                  class="input footer__input phone"
+                  placeholder="Phone Number*"
+                  name="phone"
+                  required
+                />
+              </div>
+              <div class="footer__message-group">
+                <textarea
+                  class="message footer__message"
+                  placeholder="Message"
+                  name="message"
+                  required
+                ></textarea>
+              </div>
               <button class="button footer__button" type="submit">Send</button>
               <span class="footer__info">* Required Fields</span>
             </form>
           </div>
-          <div class="footer-info">
-            <div class="footer-text">
-              <span class="footer-text__item">Disclaimer</span>
-              <span class="footer-text__item">Conditions of use</span>
-              <span class="footer-text__item">Cancellation policy</span>
-            </div>
+        </div>
+        <div class="footer-info">
+          <div class="footer-text">
+            <span class="footer-text__item">Disclaimer</span>
+            <span class="footer-text__item">Conditions of use</span>
+            <span class="footer-text__item">Cancellation policy</span>
           </div>
-          <div class="footer-card">
-            <img
-              src="img\pay-cards.jpg"
-              alt="Pay card"
-              class="footer-card__image"
-            />
-          </div>
+          <img
+            src="img/pay-cards.jpg"
+            alt="Pay card"
+            class="footer-card__image"
+          />
         </div>
       </div>
     </footer>
+    <div class="modal">
+      <div
+        class="modal__overlay"
+        id="modal1_id"
+        role="dialog"
+        aria-hidden="true"
+        data-backdrop="static"
+        data-keyboard="false"
+        tabindex="-1"
+      ></div>
+      <div
+        class="modal__dialog"
+        id="modal_id"
+        role="dialog"
+        aria-hidden="true"
+        data-backdrop="static"
+        data-keyboard="false"
+        tabindex="-1"
+      >
+        <a href="#" class="modal__close">
+          <img src="img/close.svg" alt="Close" />
+        </a>
+        <h3 class="modal__title modal __title--mb-3">Booking</h3>
+        <form action="send.php" method="POST" class="modal__form form">
+          <input
+            type="text"
+            class="input modal__input"
+            placeholder="Your Full Name*"
+            name="name"
+            required
+            minlength="2"
+          />
+          <input
+            type="tel"
+            class="input modal__input phone"
+            placeholder="Phone Number*"
+            name="phone"
+            required
+          />
+          <input
+            type="email"
+            class="input modal__input"
+            placeholder="Your Email*"
+            name="email"
+            required
+          />
+          <textarea
+            class="message modal__message"
+            placeholder="Message"
+            required
+            name="search"
+          ></textarea>
+          <button class="button modal__button" type="submit">Send</button>
+          <span class="modal__info">* Required Fields</span>
+        </form>
+      </div>
+    </div>
+    <script src="JS/aos.js"></script>
+    <script src="JS/jquery-3.6.0.min.js"></script>
+    <script src="JS/jquery.mask.min.js"></script>
     <script src="JS/swiper.js"></script>
+    <script src="JS/jquery.validate.min.js"></script>
     <script src="JS/main.js"></script>
   </body>
 </html>

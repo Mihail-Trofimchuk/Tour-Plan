@@ -13,13 +13,14 @@
       height: 100%
       border-radius: 8px 0px 0px 8px
     &__offer
+      width: 95px
       position: absolute
       padding: 8px 12px
       background-color: $primary
       color: $light
       top: 26px
       left: 0  
-      border-radius: 0 8px 8px  0
+      border-radius: 0px 4px 4px 0px
       font-family: Mulish
       font-style: normal
       font-weight: 600
@@ -37,27 +38,29 @@
       color: $light
       padding: 40px 21px 27px 44px
     &__introduction
-      margin-top: 6px
-      margin-bottom: 27px
+      margin-top: 0
+      margin-bottom: 28px
       font-weight: bold
       font-size: 18px
       line-height: 23px
     &__description 
       margin: 0
-      margin-bottom: 34px
+      margin-bottom: 44px
       font-family: Mulish
       font-style: normal
       font-weight: normal
       font-size: 14px
       line-height: 160.6%
     &-guests
-      margin-bottom: 37px     
+      margin-bottom: 33px 
+      
   &-cost
     display: flex
     flex-direction: row
     justify-content: space-between
     align-items: space-between
     &-button
+      transition: all 500ms ease
       display: flex
       align-items: flex-end
       
@@ -89,9 +92,9 @@
       font-weight: normal
       font-size: 12px
       line-height: 15px
-      margin-bottom: 11px
+      margin-bottom: 10px
     &__icon
-      margin-right: 15px
+      margin-right: 10px
     &__description 
       font-family: Mulish
       font-style: normal
@@ -99,6 +102,9 @@
       font-size: 12px
       line-height: 15px  
   &__button
+    transition: all 500ms ease
+    font-style: normal
+    font-weight: 600
     display: block
     padding: 10px 26px
     background: $primary
@@ -120,6 +126,7 @@
     margin: 0 0 23px 0
     font-family: Mulish
   &__title
+    margin-top: 0
     font-weight: bold
     font-size: 36px
     line-height: 45px
@@ -152,6 +159,7 @@
     &:nth-child(1)
       grid-column: 1/3
     &-item
+      
       display: flex
       flex-direction: column
     &-image
@@ -180,18 +188,13 @@
       width: 100%
       height: 100%
       border-radius: 8px 8px 0px 0px
-.packages
-  &-cost
-    &__low
-      font-size: 14px
-
   &-horizonelement
     &-guests       
       &-text
         &:nth-child(-n+2)
-          margin-bottom: 11px
+          margin-bottom: 6px
       &__icon
-        margin-right: 16px    
+        margin-right: 13px    
       &__description
         font-family: Mulish
         font-weight: normal

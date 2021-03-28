@@ -23,7 +23,6 @@ $(document).ready(function () {
 
   var menuButton = document.querySelector('.menu-button');
   menuButton.addEventListener('click', function () {
-    console.log('Клик по кнопке меню');
     document
       .querySelector('.navbar-button')
       .classList.toggle('navbar-button--visible');
@@ -47,11 +46,22 @@ $(document).ready(function () {
     modalDialog.removeClass('modal__dialog--visible');
   }
 });
-document.addEventListener('keydown', function (e) {
+/*document.addEventListener('keydown', function (e) {
   if (e.keyCode === 27) document.getElementById('modal_id').hidden = 1;
 });
 document.addEventListener('keydown', function (e) {
   if (e.keyCode === 27) document.getElementById('modal1_id').hidden = 1;
+});
+$('#modal_id').modal({ backdrop: 'static', keyboard: false });
+$('#modal1_id').modal({ backdrop: 'static', keyboard: false });
+$(document).off('keydown');*/
+$(document).keyup(function (e) {
+  if (e.keyCode == 27) {
+    var modalOverlay = $('.modal__overlay');
+    var modalDialog = $('.modal__dialog');
+    modalOverlay.removeClass('modal__overlay--visible');
+    modalDialog.removeClass('modal__dialog--visible');
+  }
 });
 //Маска
 $(document).ready(function () {

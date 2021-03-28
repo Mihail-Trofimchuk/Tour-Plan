@@ -1,31 +1,32 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="img/icons8.png" type="image/x-icon" />
     <link rel="stylesheet" href="css/style.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&family=Nunito:wght@400;700;800&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;600&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="css/aos.css" />
     <link rel="stylesheet" href="css/swiper.css" />
-    <script
-      src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=<5ed309e2-9fba-4c63-9425-565cf3513ce9>"
-      type="text/javascript"
-    ></script>
-    <script src="JS/mapbasics.js" type="text/javascript"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;
+    apikey='5ed309e2-9fba-4c63-9425-565cf3513ce9'"></script>
+    <script src="JS/mapbasics.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
-    <script src="js/JQuare.js"></script>
-    <script src="js/JQuareMin.js"></script>
     <title>Best Tour Plan - Hotel Booking</title>
   </head>
   <body>
     <header class="navbar navbar--mobile_fixed">
       <div class="container">
         <div class="navbar-top">
-          <a href="#" class="logo" data-aos="fade-right">
+          <a href="#" class="logo"">
             <img
               src="img/horizontal-logo.svg "
               alt="Logo: Best Tour Plan"
@@ -35,20 +36,16 @@
           <form
             action="#"
             class="search navbar__search navbar__search--mobile--hidden form"
-            data-aos="fade-right"
           >
-            <div class="search__input-group">
-              <input
-                type="text"
-                class="search__input"
-                placeholder="Search Location"
-                required
-                name="search"
-              />
-              <button class="search__button">
-                <img src="img/search.svg" alt="Icon: search" />
-              </button>
-            </div>
+            <input
+              type="text"
+              class="search__input"
+              placeholder="Search Location"
+              name="search"
+            />
+            <button class="search__button">
+              <img src="img/search.svg" alt="Icon: search" />
+            </button>
           </form>
           <a href="#" class="user navbar__user navbar__user--mobile--hidden">
             <img
@@ -212,14 +209,14 @@
 
             <!-- If we need navigation buttons -->
             <button class="hotel-slider__button hotel-slider__button--prev">
-              <img src="img\arrow-prev.svg" alt="Стрелочка" />
+              <img src="img/arrow-prev.svg" alt="Стрелочка" />
             </button>
             <button class="hotel-slider__button hotel-slider__button--next">
-              <img src="img\arrow-next.svg" alt="Стрелочка" />
+              <img src="img/arrow-next.svg" alt="Стрелочка" />
             </button>
           </div>
           <div class="hotel-right">
-            <div class="booking" data-aos="fade-left" data-aos-delay="300">
+            <div class="booking" >
               <div class="booking__info">
                 <!--  -->
                 <div class="booking__price">
@@ -231,7 +228,7 @@
                 <div class="booking__room">
                   <div class="booking__text">
                     <img
-                      src="img\user.svg"
+                      src="img/user.svg"
                       alt="Icon: User"
                       class="booking__icon"
                     />
@@ -239,7 +236,7 @@
                   </div>
                   <div class="booking__text">
                     <img
-                      src="img\person-home.svg"
+                      src="img/person-home.svg"
                       alt="Icon: Home"
                       class="booking__icon"
                     />
@@ -252,7 +249,7 @@
               <div class="booking__call-center">
                 <span class="booking__heading">Quick Booking</span>
                 <a class="booking__call-center__number" href="tel:12100">
-                  <img src="img\telephone.svg" alt="Icon: phone" />
+                  <img src="img/telephone.svg" alt="Icon: phone" />
                   <span class="booking__call-center__num">12100</span>
                 </a>
               </div>
@@ -261,7 +258,9 @@
               </button>
             </div>
             <!-- booking -->
-            <div id="map" data-aos="fade-left" data-aos-delay="300"></div>
+            <div id="map"  ></div>
+
+            <!-- map -->
           </div>
           <!-- hotel-right width="100%"
                 height="213"-->
@@ -281,7 +280,7 @@
                 </span>
                 <div class="packages-horizonelement-image">
                   <img
-                    src="img\packages-5.jpg"
+                    src="img/packages-5.jpg"
                     alt="Photo"
                     class="packages-horizonelement__image"
                   />
@@ -307,7 +306,7 @@
                   <div class="packages-horizonelement-guests">
                     <div class="packages-horizonelement-guests-text">
                       <img
-                        src="img\map-pin.svg"
+                        src="img/map-pin.svg"
                         alt="Icon: User"
                         class="packages-horizonelement-guests__icon"
                       />
@@ -317,7 +316,7 @@
                     </div>
                     <div class="packages-horizonelement-guests-text">
                       <img
-                        src="img\user.svg"
+                        src="img/user.svg"
                         alt="Icon: User"
                         class="packages-horizonelement-guests__icon"
                       />
@@ -327,7 +326,7 @@
                     </div>
                     <div class="packages-horizonelement-guests-text">
                       <img
-                        src="img\homee.svg"
+                        src="img/homee.svg"
                         alt="Icon: User"
                         class="packages-horizonelement-guests__icon"
                       />
@@ -342,7 +341,12 @@
                       <span class="packages-cost__low">$ 8,500</span>
                     </div>
                     <div class="packages-cost-button">
-                      <button type="button" class="packages__button">
+                      <button
+                        type="button"
+                        class="packages__button"
+                        data-toggle="modal"
+                        type="button"
+                      >
                         Book Now
                       </button>
                     </div>
@@ -356,12 +360,12 @@
             <div
               class="packages-element-item"
               data-aos="zoom-in"
-              data-aos-delay="500"
+              data-aos-delay="100"
             >
               <span class="packages-element__offer"> Flash Offer </span>
               <div class="packages-element-image">
                 <img
-                  src="img\packages.jpg"
+                  src="img/packages.jpg"
                   alt="Photo"
                   class="packages-element__image"
                 />
@@ -371,7 +375,7 @@
                 <div class="packages-guests">
                   <div class="packages-guests-text">
                     <img
-                      src="img\map-pin.svg"
+                      src="img/map-pin.svg"
                       alt="Icon: User"
                       class="packages-guests__icon"
                     />
@@ -381,7 +385,7 @@
                   </div>
                   <div class="packages-guests-text">
                     <img
-                      src="img\user.svg"
+                      src="img/user.svg"
                       alt="Icon: User"
                       class="packages-guests__icon"
                     />
@@ -389,7 +393,7 @@
                   </div>
                   <div class="packages-guests-text">
                     <img
-                      src="img\homee.svg"
+                      src="img/homee.svg"
                       alt="Icon: User"
                       class="packages-guests__icon"
                     />
@@ -402,7 +406,12 @@
                     <span class="packages-cost__low">$ 3,000</span>
                   </div>
                   <div class="packages-cost-button">
-                    <button type="button" class="packages__button">
+                    <button
+                      type="button"
+                      class="packages__button"
+                      data-toggle="modal"
+                      type="button"
+                    >
                       Book Now
                     </button>
                   </div>
@@ -415,12 +424,12 @@
             <div
               class="packages-element-item"
               data-aos="zoom-in"
-              data-aos-delay="500"
+              data-aos-delay="100"
             >
               <span class="packages-element__offer"> Flash Offer </span>
               <div class="packages-element-image">
                 <img
-                  src="img\packages-1.jpg"
+                  src="img/packages-1.jpg"
                   alt="Photo"
                   class="packages-element__image"
                 />
@@ -430,7 +439,7 @@
                 <div class="packages-guests">
                   <div class="packages-guests-text">
                     <img
-                      src="img\map-pin.svg"
+                      src="img/map-pin.svg"
                       alt="Icon: User"
                       class="packages-guests__icon"
                     />
@@ -440,7 +449,7 @@
                   </div>
                   <div class="packages-guests-text">
                     <img
-                      src="img\user.svg"
+                      src="img/user.svg"
                       alt="Icon: User"
                       class="packages-guests__icon"
                     />
@@ -448,7 +457,7 @@
                   </div>
                   <div class="packages-guests-text">
                     <img
-                      src="img\homee.svg"
+                      src="img/homee.svg"
                       alt="Icon: User"
                       class="packages-guests__icon"
                     />
@@ -461,7 +470,12 @@
                     <span class="packages-cost__low">$ 9,500</span>
                   </div>
                   <div class="packages-cost-button">
-                    <button type="button" class="packages__button">
+                    <button
+                      type="button"
+                      class="packages__button"
+                      data-toggle="modal"
+                      type="button"
+                    >
                       Book Now
                     </button>
                   </div>
@@ -474,12 +488,12 @@
             <div
               class="packages-element-item"
               data-aos="zoom-in"
-              data-aos-delay="500"
+              data-aos-delay="100"
             >
               <span class="packages-element__offer"> Flash Offer </span>
               <div class="packages-element-image">
                 <img
-                  src="img\packages-2.jpg"
+                  src="img/packages-2.jpg"
                   alt="Photo"
                   class="packages-element__image"
                 />
@@ -489,7 +503,7 @@
                 <div class="packages-guests">
                   <div class="packages-guests-text">
                     <img
-                      src="img\map-pin.svg"
+                      src="img/map-pin.svg"
                       alt="Icon: User"
                       class="packages-guests__icon"
                     />
@@ -499,7 +513,7 @@
                   </div>
                   <div class="packages-guests-text">
                     <img
-                      src="img\user.svg"
+                      src="img/user.svg"
                       alt="Icon: User"
                       class="packages-guests__icon"
                     />
@@ -507,7 +521,7 @@
                   </div>
                   <div class="packages-guests-text">
                     <img
-                      src="img\homee.svg"
+                      src="img/homee.svg"
                       alt="Icon: User"
                       class="packages-guests__icon"
                     />
@@ -520,7 +534,12 @@
                     <span class="packages-cost__low">$ 2,500</span>
                   </div>
                   <div class="packages-cost-button">
-                    <button type="button" class="packages__button">
+                    <button
+                      type="button"
+                      class="packages__button"
+                      data-toggle="modal"
+                      type="button"
+                    >
                       Book Now
                     </button>
                   </div>
@@ -533,12 +552,12 @@
             <div
               class="packages-element-item"
               data-aos="zoom-in"
-              data-aos-delay="500"
+              data-aos-delay="100"
             >
               <span class="packages-element__offer"> Flash Offer </span>
               <div class="packages-element-image">
                 <img
-                  src="img\packages-3.jpg"
+                  src="img/packages-3.jpg"
                   alt="Photo"
                   class="packages-element__image"
                 />
@@ -548,7 +567,7 @@
                 <div class="packages-guests">
                   <div class="packages-guests-text">
                     <img
-                      src="img\map-pin.svg"
+                      src="img/map-pin.svg"
                       alt="Icon: User"
                       class="packages-guests__icon"
                     />
@@ -558,7 +577,7 @@
                   </div>
                   <div class="packages-guests-text">
                     <img
-                      src="img\user.svg"
+                      src="img/user.svg"
                       alt="Icon: User"
                       class="packages-guests__icon"
                     />
@@ -566,7 +585,7 @@
                   </div>
                   <div class="packages-guests-text">
                     <img
-                      src="img\homee.svg"
+                      src="img/homee.svg"
                       alt="Icon: User"
                       class="packages-guests__icon"
                     />
@@ -579,7 +598,12 @@
                     <span class="packages-cost__low">$ 3,500</span>
                   </div>
                   <div class="packages-cost-button">
-                    <button type="button" class="packages__button">
+                    <button
+                      type="button"
+                      class="packages__button"
+                      data-toggle="modal"
+                      type="button"
+                    >
                       Book Now
                     </button>
                   </div>
@@ -620,14 +644,14 @@
     </section>
     <section class="reviews">
       <div class="container">
-        <h2 class="reviews__title">What people think about us</h2>
+        <h2 class="reviews__title">What people thinks about us</h2>
         <div class="swiper-container reviews-slider">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
               <div class="reviews-slider__item">
                 <div class="reviews-slider__profile">
                   <img
-                    src="img\reviews-avatar.jpg"
+                    src="img/reviews-avatar.jpg"
                     alt="Photo: Megan Fox"
                     class="reviews-slider__avatar"
                   />
@@ -658,7 +682,7 @@
               <div class="reviews-slider__item">
                 <div class="reviews-slider__profile">
                   <img
-                    src="img\usser3.jpg"
+                    src="img/usser3.jpg"
                     alt="Photo: Alfie Doner"
                     class="reviews-slider__avatar"
                   />
@@ -683,12 +707,7 @@
                   guests with a card, which is an undoubted advantage. The hotel
                   has a very convenient location: a 2-3 minute walk to
                   Buckingham Palace, within walking distance to my beloved St.
-                  James's Park, to the metro station. The last time we were in
-                  this hotel, our stay was overshadowed by terrible noise
-                  (including at night) from the street, as some renovation work
-                  is underway under the windows of the hotel, in connection with
-                  which we can sleep (or just relax and unwind) ) was simply
-                  impossible.
+                  James's Park, to the metro station.
                 </p>
               </div>
             </div>
@@ -696,7 +715,7 @@
               <div class="reviews-slider__item">
                 <div class="reviews-slider__profile">
                   <img
-                    src="img\usser2.jpg"
+                    src="img/usser2.jpg"
                     alt="Photo: Jack"
                     class="reviews-slider__avatar"
                   />
@@ -732,7 +751,7 @@
               <div class="reviews-slider__item">
                 <div class="reviews-slider__profile">
                   <img
-                    src="img\usser1.jpg"
+                    src="img/usser1.jpg"
                     alt="Photo: Harry"
                     class="reviews-slider__avatar"
                   />
@@ -774,7 +793,7 @@
         <h2 class="activities__title">Other Activities</h2>
         <div class="activities-wrapper">
           <div
-            class="card activities__card"
+            class="card activities__card activities__card-first"
             data-aos="fade-up"
             data-aos-delay="100"
           >
@@ -784,12 +803,17 @@
 of chamarel"
               class="card__image"
             />
-            <h3 class="card__title">The curious corner of chamarel</h3>
-            <button class="card__button">Book Now</button>
+            <h3 class="card__title">
+              The curious corner <br />
+              of chamarel
+            </h3>
+            <button class="card__button" data-toggle="modal" type="button">
+              Book Now
+            </button>
           </div>
           <!-- card -->
           <div
-            class="card activities__card"
+            class="card activities__card activities__card-second"
             data-aos="fade-up"
             data-aos-delay="300"
           >
@@ -800,10 +824,12 @@ course"
               class="card__image"
             />
             <h3 class="card__title">Gymkhana club golf course</h3>
-            <button class="card__button">Book Now</button>
+            <button class="card__button" data-toggle="modal" type="button">
+              Book Now
+            </button>
           </div>
           <div
-            class="card activities__card"
+            class="card activities__card activities__card-third"
             data-aos="fade-up"
             data-aos-delay="500"
           >
@@ -815,11 +841,16 @@ trip - full day
 "
               class="card__image"
             />
-            <h3 class="card__title">Tamarind falls hiking trip - full day</h3>
-            <button class="card__button">Book Now</button>
+            <h3 class="card__title">
+              Tamarind falls hiking <br />
+              trip - full day
+            </h3>
+            <button class="card__button" data-toggle="modal" type="button">
+              Book Now
+            </button>
           </div>
           <div
-            class="card activities__card"
+            class="card activities__card activities__card-fourth"
             data-aos="fade-up"
             data-aos-delay="700"
           >
@@ -830,7 +861,9 @@ quest"
               class="card__image"
             />
             <h3 class="card__title">The blue marine discovery quest</h3>
-            <button class="card__button">Book Now</button>
+            <button class="card__button" data-toggle="modal" type="button">
+              Book Now
+            </button>
           </div>
         </div>
       </div>
@@ -839,7 +872,7 @@ quest"
       <div class="container">
         <div class="footer-wrapper">
           <img
-            src="img\vertical-logo.svg"
+            src="img/vertical-logo.svg"
             alt="Best tour plan"
             class="logo footer__logo"
           />
@@ -900,14 +933,23 @@ quest"
           <div class="footer__social-network">
             <h3 class="footer__title footer__title--inline">Social Network</h3>
             <div class="footer__social-links">
-              <a href="#" class="footer__link"
-                ><img src="img\fb.svg" alt="Icon: Facebook"
+              <a
+                href="https://ru-ru.facebook.com/"
+                class="footer__link"
+                target="blank"
+                ><img src="img/fb.svg" alt="Icon: Facebook"
               /></a>
-              <a href="#" class="footer__link"
-                ><img src="img\inst.svg" alt="Icon: Instagram"
+              <a
+                href="https://www.instagram.com/"
+                class="footer__link"
+                target="blank"
+                ><img src="img/inst.svg" alt="Icon: Instagram"
               /></a>
-              <a href="#" class="footer__link"
-                ><img src="img\yt.svg" alt="Icon: YouTube"
+              <a
+                href="https://www.youtube.com/"
+                class="footer__link"
+                target="blank"
+                ><img src="img/yt.svg" alt="Icon: YouTube"
               /></a>
             </div>
           </div>
@@ -929,7 +971,9 @@ quest"
             </ul>
           </div>
           <div class="footer__contact-details">
-            <h3 class="footer__title footer__title--mb-3">Contact Details</h3>
+            <h3 class="footer__title footer__title--mb-3--mb-2">
+              Contact Details
+            </h3>
             <p class="footer__text">
               Feel free to contact us by phone, email or by our contact form
             </p>
@@ -938,26 +982,26 @@ quest"
                 <div class="footer__icon-wrapper">
                   <img
                     class="footer__icon"
-                    src="img\point.svg"
+                    src="img/point.svg"
                     alt="icon: map"
                   />
                 </div>
-                <a href="" class="footer__item-link">
+                <span class="footer__item-link">
                   9748 Blossom Hill Rd undefined Lansing, Idaho 68545 United
-                  States</a
+                  States</span
                 >
               </li>
               <li class="footer__item footer__item--mb-2">
                 <div class="footer__icon-wrapper">
                   <img
                     class="footer__icon"
-                    src="img\telephone-radar.svg"
+                    src="img/telephone-radar.svg"
                     alt="icon: telephone"
                   />
                 </div>
                 <div class="footer__item-wrapper">
                   Tel (business hours) :<a
-                    href="269 1500 "
+                    href="tel:26-91-500 "
                     class="footer__item-link"
                   >
                     269 1500
@@ -965,23 +1009,25 @@ quest"
                   <br />
                   Tel (hotline) Monday - Saturday:
                   <a href="tel:52-56-61-38" class="footer__item-link">
-                    52-56-61-38 (08:00 am – 20:00 pm)</a
-                  ><br />
+                    52-56-61-38 </a
+                  >(08:00 am – 20:00 pm)<br />
                   Tel (hotline) Sunday:
-                  <a href="52-56-61-38" class="footer__item-link">
-                    52-56-61-38 (08:00 am – 14:00 pm)</a
-                  >
+                  <a href="tel:52-56-61-38" class="footer__item-link">
+                    52-56-61-38 </a
+                  >(08:00 am – 14:00 pm)
                 </div>
               </li>
               <li class="footer__item footer__item--mb-2">
                 <div class="footer__icon-wrapper">
                   <img
                     class="footer__icon"
-                    src="img\massege.svg"
+                    src="img/massege.svg"
                     alt="icon:massege"
                   />
                 </div>
-                <a href="cherly.lawson@example.com" class="footer__item-link"
+                <a
+                  href="mailto:cherly.lawson@example.com"
+                  class="footer__item-link"
                   >cherly.lawson@example.com</a
                 >
               </li>
@@ -1006,33 +1052,31 @@ quest"
                   placeholder="Phone Number*"
                   name="phone"
                   required
-                  phone-mask="+7 (000) 000-00-00"
                 />
               </div>
-
-              <textarea
-                class="message footer__message"
-                placeholder="Message"
-                name="message"
-              ></textarea>
+              <div class="footer__message-group">
+                <textarea
+                  class="message footer__message"
+                  placeholder="Message"
+                  name="message"
+                ></textarea>
+              </div>
               <button class="button footer__button" type="submit">Send</button>
               <span class="footer__info">* Required Fields</span>
             </form>
           </div>
-          <div class="footer-info">
-            <div class="footer-text">
-              <span class="footer-text__item">Disclaimer</span>
-              <span class="footer-text__item">Conditions of use</span>
-              <span class="footer-text__item">Cancellation policy</span>
-            </div>
+        </div>
+        <div class="footer-info">
+          <div class="footer-text">
+            <span class="footer-text__item">Disclaimer</span>
+            <span class="footer-text__item">Conditions of use</span>
+            <span class="footer-text__item">Cancellation policy</span>
           </div>
-          <div class="footer-card">
-            <img
-              src="img\pay-cards.jpg"
-              alt="Pay card"
-              class="footer-card__image"
-            />
-          </div>
+          <img
+            src="img/pay-cards.jpg"
+            alt="Pay card"
+            class="footer-card__image"
+          />
         </div>
       </div>
     </footer>
@@ -1056,7 +1100,7 @@ quest"
         tabindex="-1"
       >
         <a href="#" class="modal__close">
-          <img src="img\close.svg" alt="Close" />
+          <img src="img/close.svg" alt="Close" />
         </a>
         <h3 class="modal__title modal __title--mb-3">Booking</h3>
         <form action="send.php" method="POST" class="modal__form form">
@@ -1074,7 +1118,6 @@ quest"
             placeholder="Phone Number*"
             name="phone"
             required
-            phone-mask="+7 (000) 000-00-00"
           />
           <input
             type="email"
@@ -1086,13 +1129,15 @@ quest"
           <textarea
             class="message modal__message"
             placeholder="Message"
-            name="message"
+            required
+            name="search"
           ></textarea>
           <button class="button modal__button" type="submit">Send</button>
           <span class="modal__info">* Required Fields</span>
         </form>
       </div>
     </div>
+
     <script src="JS/aos.js"></script>
     <script src="JS/jquery-3.6.0.min.js"></script>
     <script src="JS/jquery.mask.min.js"></script>
